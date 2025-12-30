@@ -34,4 +34,39 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Scroll Spy / Active Navigation Logic
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // Trigger when 30% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.getAttribute('id');
+                
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-active');
+                    // Optional: remove standard Tailwind classes if you managed them via JS, 
+                    // but here we use the CSS class approach which overrides/adds to them.
+                });
+
+                // Add active class to corresponding link
+                const activeLink = document.querySelector(`nav a[href="#${currentId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('nav-active');
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });

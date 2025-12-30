@@ -75,4 +75,13 @@
 			display: none !important;
 		}
 	}
+
+	/* Active Navigation State */
+	.nav-active {
+		@apply bg-white/10 border-white/10;
+	}
+	
+	.nav-active span:first-child {
+		@apply opacity-100;
+	}
 }
