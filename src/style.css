@@ -4,6 +4,8 @@
 	--color-primary: #1e293b;
 	--color-accent: #3b82f6;
 	--color-sidebar: #5b78a6;
+	--color-canvas-dark: #42587a;
+	--color-canvas-light: #f8fafc;
 	--font-sans: "Inter", system-ui, -apple-system,
 		sans-serif;
 	--font-outfit: "Outfit", system-ui, -apple-system,
@@ -15,7 +17,7 @@
 		@apply scroll-smooth;
 	}
 	body {
-		@apply bg-[#f8fafc] text-slate-900 font-sans antialiased;
+		@apply bg-canvas-light text-slate-900 font-sans antialiased;
 	}
 
 	/* Custom Scrollbar for Main Content */
@@ -41,7 +43,7 @@
 
 	.section-title::after {
 		content: "";
-		@apply h-[2px] flex-grow bg-blue-100 rounded-full;
+		@apply h-[2px] grow bg-blue-100 rounded-full;
 	}
 
 	.skill-bar-bg {
