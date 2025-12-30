@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+	--color-primary: #1e293b;
+	--color-accent: #3b82f6;
+	--color-sidebar: #5b78a6;
+	--font-sans: "Inter", system-ui, -apple-system,
+		sans-serif;
+	--font-outfit: "Outfit", system-ui, -apple-system,
+		sans-serif;
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+	body {
+		@apply bg-[#f8fafc] text-slate-900 font-sans antialiased;
+	}
+
+	/* Custom Scrollbar for Main Content */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		@apply bg-slate-100;
+	}
+	::-webkit-scrollbar-thumb {
+		@apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+	}
+}
+
+@layer utilities {
+	.glass-card {
+		@apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+	}
+
+	.section-title {
+		@apply text-2xl font-bold font-outfit text-blue-600 tracking-wider uppercase mb-8 flex items-center gap-3;
+	}
+
+	.section-title::after {
+		content: "";
+		@apply h-[2px] flex-grow bg-blue-100 rounded-full;
+	}
+
+	.skill-bar-bg {
+		@apply h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-inner;
+	}
+
+	.skill-bar-fill {
+		@apply h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out;
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	@media print {
+		body {
+			background-color: white !important;
+		}
+		aside {
+			background-color: #5b78a6 !important;
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+		}
+		.no-print {
+			display: none !important;
+		}
+	}
+}
