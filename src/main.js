@@ -127,7 +127,7 @@ const cvData = {
     // Input: Languages (Language, Level)
     languages: [
         { name: "Bahasa Indonesia", level: "Native" },
-        { name: "English", level: "Professional Working Proficiency" },
+        { name: "English", level: "Fluent" },
         { name: "Sundanese", level: "Native" }
     ],
 
@@ -339,7 +339,7 @@ const renderExperience = (item) => `
                         <span class="text-slate-500 text-sm">${item.location}</span>
                     </div>
                 </div>
-                <span class="shrink-0 text-xs font-bold text-white bg-blue-600 px-3 py-1 rounded-full uppercase tracking-wider">
+                <span class="shrink-0 max-w-fit text-xs font-bold text-white bg-blue-600 px-3 py-1 rounded-full uppercase tracking-wider">
                     ${item.startDate} - ${item.endDate}
                 </span>
             </div>
@@ -367,7 +367,7 @@ const renderEducation = (item) => `
                     <p class="text-slate-400 text-xs mt-1">${item.location}</p>
                 </div>
             </div>
-            <span class="text-xs font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full whitespace-nowrap">
+            <span class="text-xs font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full whitespace-nowrap ml-16 sm:ml-0 max-w-fit">
                 ${item.startDate} - ${item.endDate}
             </span>
         </div>
@@ -479,15 +479,15 @@ const renderHobbies = (text) => `
 const renderAdditional = (item) => `
     <div class="py-4 border-b border-slate-50 last:border-0 last:pb-0 first:pt-0">
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1">
-            <div>
+            <div class="flex-grow">
                 <h4 class="font-bold text-slate-900">${item.activity}</h4>
                 <p class="text-sm text-blue-600 font-medium">${item.title}</p>
             </div>
-            <span class="text-xs font-bold text-slate-400 shrink-0 bg-slate-50 px-2 py-1 rounded">
+            <span class="text-xs font-bold text-slate-400 shrink-0 bg-slate-50 px-2 py-1 rounded w-fit sm:mt-0 mt-1">
                 ${item.startDate} - ${item.endDate}
             </span>
         </div>
-        ${item.description ? `<p class="text-slate-600 text-sm leading-relaxed">${item.description}</p>` : ''}
+        ${item.description ? `<p class="text-slate-600 text-sm leading-relaxed mt-1">${item.description}</p>` : ''}
     </div>
 `;
 
