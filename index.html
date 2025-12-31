@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelita - Fullstack Developer CV</title>
-    <meta name="description" content="Professional CV of Pelita, a Fullstack Developer with 9 years of experience.">
+    <title>Professional Portfolio</title>
+    <meta name="description" content="Professional Portfolio">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,733 +18,134 @@
 
     <div class="flex flex-col md:flex-row items-start min-h-screen max-w-[1600px] mx-auto relative bg-canvas-light">
 
-        <!-- Sidebar (Left Column) - Fixed on Desktop -->
+        <!-- 1. PERSONAL (Sidebar) -->
         <aside class="w-full md:w-80 md:h-screen bg-sidebar text-white shrink-0 md:sticky md:top-0 z-50">
             <div class="h-full flex flex-col p-8 overflow-y-auto no-scrollbar overscroll-contain">
-                <!-- Profile Section -->
-                <div class="text-center mb-6">
-                    <div class="relative inline-block cursor-pointer group">
-                        <div
-                            class="w-32 h-32 bg-white rounded-full mx-auto mb-4 p-1 border-4 border-emerald-500 overflow-hidden shadow-2xl ring-4 ring-white/10 transition-transform duration-300 group-hover:scale-105">
-                            <img src="./assets/profile.png" alt="Pelita"
-                                class="w-full h-full object-cover rounded-full">
-                        </div>
-                    </div>
-                    <h1 class="text-2xl font-bold font-outfit mb-0.5 tracking-tight">Pelita</h1>
-                    <p class="text-blue-100/70 text-sm font-medium mb-4">(13141)</p>
+                <!-- Profile Header -->
+                <div id="profile-header" class="text-center mb-8">
+                    <!-- Dynamic Content -->
+                </div>
 
-                    <div class="bg-white/10 backdrop-blur-sm py-3 px-4 rounded-xl border border-white/10 shadow-inner">
-                        <p class="text-[9px] text-blue-100/60 uppercase tracking-[0.2em] font-bold mb-0.5">Ready kerja:
-                        </p>
-                        <p class="text-xs font-bold text-white uppercase">01 September 2025</p>
-                    </div>
+                <!-- Contact Information (Data Driven) -->
+                <div id="contact-info" class="space-y-4 text-sm">
+                    <!-- Dynamic Content -->
+                </div>
+
+                <!-- Navigation Separator & Heading -->
+                <div class="pt-6 mt-6 border-t border-white/10 mb-2">
+                    <p class="text-[10px] font-bold text-blue-100/60 uppercase tracking-[0.2em] px-2">Menu</p>
                 </div>
 
                 <!-- Navigation -->
-                <nav class="grow space-y-0.5">
-                    <a href="#about"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">About</span>
-                    </a>
-                    <a href="#personality"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Personality</span>
-                    </a>
-                    <a href="#skills"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Skills</span>
-                    </a>
-                    <a href="#experience"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Experience</span>
-                    </a>
-                    <a href="#education"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Education</span>
-                    </a>
-                    <a href="#portfolio"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Portfolio</span>
-                    </a>
-                    <a href="#interview"
-                        class="group flex items-center gap-3 py-2.5 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                        <span class="text-xs font-bold tracking-widest uppercase">Interview</span>
-                    </a>
+                <nav id="nav-menu" class="flex-grow space-y-0.5">
+                    <!-- Dynamic Nav Links -->
                 </nav>
 
                 <!-- Footer -->
                 <div class="pt-4 mt-4 border-t border-white/10 text-center">
-                    <p class="text-[9px] font-bold text-blue-100/30 uppercase tracking-widest">© 2025 Socialvit.ID</p>
+                    <p id="copyright-text" class="text-[9px] font-bold text-blue-100/30 uppercase tracking-widest"></p>
                 </div>
             </div>
         </aside>
 
         <!-- Main Content (Right Column) -->
-        <main class="grow p-6 md:p-12 lg:p-16 w-full">
+        <main class="flex-grow p-6 md:p-12 lg:p-16 w-full space-y-20">
 
-            <!-- Header Action -->
-            <div class="flex flex-col sm:flex-row justify-end items-center mb-16 gap-4 no-print">
-                <button
-                    class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 bg-green-700 text-white text-sm font-bold rounded-xl hover:bg-green-800 transition-all shadow-md active:scale-95">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                    </svg>
-                    Request Interview
-                </button>
-            </div>
-
-            <!-- About Section -->
-            <section id="about" class="mb-20 scroll-mt-16">
-                <h2 class="section-title">About</h2>
-                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
-                    <p class="text-lg text-slate-800 font-medium mb-10">
-                        Hi, perkenalkan nama saya <span class="font-bold">Pelita</span>.
-                    </p>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-4">
-                        <div class="space-y-4">
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Nama</span>
-                                <span class="text-slate-800 font-medium">: Pelita</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Umur</span>
-                                <span class="text-slate-800 font-medium">: 28 Tahun</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Gender</span>
-                                <span class="text-slate-800 font-medium">: female</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Birthday</span>
-                                <span class="text-slate-800 font-medium">: 1997-12-27</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Birth Location</span>
-                                <span class="text-slate-800 font-medium">: Bandung</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Domisili</span>
-                                <span class="text-slate-800 font-medium">: Bandung</span>
-                            </div>
-                            <div class="grid grid-cols-[120px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Phone</span>
-                                <div class="flex items-center gap-2">
-                                    <span>:</span>
-                                    <a href="#"
-                                        class="flex items-center gap-2 px-5 py-2 bg-green-700 text-white text-xs font-bold rounded-lg hover:bg-green-800 transition-colors">
-                                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .004 5.412.001 12.048c0 2.12.54 4.19 1.566 6.02L0 24l6.125-1.606a11.845 11.845 0 005.922 1.577h.005c6.635 0 12.046-5.411 12.049-12.048a11.822 11.822 0 00-3.526-8.441z" />
-                                        </svg>
-                                        contact me
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Focus</span>
-                                <span class="text-slate-800 font-medium">:</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Pengalaman</span>
-                                <span class="text-slate-800 font-medium">: 9 Tahun</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Onsite Jakarta</span>
-                                <span class="text-slate-800 font-medium">: yes</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Onsite Jogja</span>
-                                <span class="text-slate-800 font-medium">: yes</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Prefer Location</span>
-                                <span class="text-slate-800 font-medium">:</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Remote</span>
-                                <span class="text-slate-800 font-medium">: yes</span>
-                            </div>
-                            <div class="grid grid-cols-[140px_1fr] items-center py-1">
-                                <span class="font-bold text-slate-900">Email</span>
-                                <span class="text-slate-800 font-medium">: bayu@upscale.id</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12">
-                        <button
-                            class="w-full py-4 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all active:scale-[0.98] shadow-lg cursor-pointer">
-                            Pricing & Benefit
-                        </button>
-                    </div>
+            <!-- 2. SUMMARY -->
+            <section id="summary" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Professional Summary</h2>
+                <div id="summary-content" class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
-            <!-- Personality Section -->
-            <section id="personality" class="mb-20 scroll-mt-16">
-                <h2 class="section-title">Personality</h2>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
-                    <!-- Personality Item 1 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Leadership</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 2 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Communication</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 3 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Hardworking</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 4 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Teamwork & Adaptability</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 5 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Creative & Innovative</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 6 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Logical Thinking</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 7 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Decision making</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Personality Item 8 -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-[15px] font-bold text-slate-800">Conflict Management</h4>
-                            <span class="text-slate-400 text-sm">8</span>
-                        </div>
-                        <div class="flex items-center gap-1.5 text-blue-500 mb-2">
-                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="text-[11px] font-bold uppercase tracking-wider opacity-60">verified</span>
-                        </div>
-                        <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div class="h-full bg-slate-500 w-[80%] rounded-full"></div>
-                        </div>
-                    </div>
+            <!-- 3. EXPERIENCE -->
+            <section id="experience" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Experience</h2>
+                <div id="experience-list" class="space-y-10">
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="mb-20 scroll-mt-16">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Skill Card 1: Backend -->
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group cursor-default">
-                        <div class="flex items-center justify-between mb-6">
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-green-200 transition-colors">Verified</span>
-                            <span class="text-xs font-bold text-slate-400 uppercase">9 Years Exp</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                            PHP & Laravel Ecosystem
-                        </h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-1">
-                                <span>Expertise Level</span>
-                                <span class="text-blue-600">90%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill w-[90%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 2: Frontend -->
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group cursor-default">
-                        <div class="flex items-center justify-between mb-6">
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-green-200 transition-colors">Verified</span>
-                            <span class="text-xs font-bold text-slate-400 uppercase">5 Years Exp</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">Vue.js, Nuxt & Tailwind</h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-1">
-                                <span>Expertise Level</span>
-                                <span class="text-blue-600">85%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill w-[85%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 3: Database -->
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group cursor-default">
-                        <div class="flex items-center justify-between mb-6">
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-green-200 transition-colors">Verified</span>
-                            <span class="text-xs font-bold text-slate-400 uppercase">7 Years Exp</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">MySQL, Redis & Optimization</h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-1">
-                                <span>Expertise Level</span>
-                                <span class="text-blue-600">80%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill w-[80%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 4: Tools -->
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group cursor-default">
-                        <div class="flex items-center justify-between mb-6">
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-green-200 transition-colors">Verified</span>
-                            <span class="text-xs font-bold text-slate-400 uppercase">Daily Use</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">Git, Docker & CI/CD</h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-1">
-                                <span>Expertise Level</span>
-                                <span class="text-blue-600">75%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill w-[75%]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="mb-20 scroll-mt-16">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="space-y-10">
-                    <!-- Experience 1 -->
-                    <div
-                        class="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-blue-100 before:rounded-full">
-                        <div class="absolute left-[-6px] top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-blue-50">
-                        </div>
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                                <h3 class="text-xl font-bold text-slate-900">PT Sumroch Karya Indonesia</h3>
-                                <span
-                                    class="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-1 rounded-full uppercase tracking-wider">Jan
-                                    2018 - Present</span>
-                            </div>
-                            <p class="text-slate-500 font-bold text-sm uppercase mb-6 tracking-widest">Full Stack
-                                Developer</p>
-                            <p class="text-slate-600 leading-relaxed">
-                                Membuat aplikasi web sesuai dengan mock up dan rancangan sistem yang telah dibuat.
-                                Hampir semua project yang saya bangun selama ini menggunakan framework laravel, dan
-                                sering menggunakan Vue.js untuk bagian front end.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Experience 2 -->
-                    <div
-                        class="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-blue-100 before:rounded-full">
-                        <div class="absolute left-[-6px] top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-blue-50">
-                        </div>
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                                <h3 class="text-xl font-bold text-slate-900">Tech Solutions Co.</h3>
-                                <span
-                                    class="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-1 rounded-full uppercase tracking-wider">Jun
-                                    2016 - Dec 2017</span>
-                            </div>
-                            <p class="text-slate-500 font-bold text-sm uppercase mb-6 tracking-widest">Junior Web
-                                Developer</p>
-                            <p class="text-slate-600 leading-relaxed">
-                                Berkontribusi dalam pengembangan modul internal perusahaan menggunakan PHP Native dan
-                                MySQL.
-                                Membantu tim senior dalam melakukan maintenance website klien.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Experience 3 -->
-                    <div
-                        class="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-blue-100 before:rounded-full">
-                        <div class="absolute left-[-6px] top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-blue-50">
-                        </div>
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                                <h3 class="text-xl font-bold text-slate-900">Freelance Project</h3>
-                                <span
-                                    class="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-1 rounded-full uppercase tracking-wider">2015
-                                    - 2016</span>
-                            </div>
-                            <p class="text-slate-500 font-bold text-sm uppercase mb-6 tracking-widest">Web Developer</p>
-                            <p class="text-slate-600 leading-relaxed">
-                                Mengerjakan berbagai proyek pembuatan landing page dan sistem informasi sederhana untuk
-                                UMKM
-                                di sekitar Cimahi dan Bandung.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="mb-20 scroll-mt-16">
+            <!-- 4. EDUCATION -->
+            <section id="education" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Education</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-200 transition-colors">
-                        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">SMKN 1 Cimahi</h3>
-                        <p class="text-blue-600 font-bold text-xs uppercase mb-4">Software Engineering</p>
-                        <p class="text-slate-400 text-sm font-medium">2013 - 2017</p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-200 transition-colors">
-                        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Widyatama University</h3>
-                        <p class="text-blue-600 font-bold text-xs uppercase mb-4">Information Systems</p>
-                        <p class="text-slate-400 text-sm font-medium">2017 - Present (Semester 7)</p>
-                    </div>
+                <div id="education-list" class="grid grid-cols-1 gap-6">
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
-            <!-- Portfolio Section -->
-            <section id="portfolio" class="mb-20 scroll-mt-16">
-                <h2 class="section-title">Portfolio</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Portfolio 1 -->
-                    <div
-                        class="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 cursor-pointer">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="./assets/images/portfolio/academic_system_thumbnail.png" alt="Portfolio"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div
-                                class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Sistem
-                                Informasi Akademik</h4>
-                            <p class="text-sm text-slate-500">Manajemen data & nilai mahasiswa</p>
-                        </div>
-                    </div>
-                    <!-- Portfolio 2 -->
-                    <div
-                        class="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 cursor-pointer">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="./assets/images/portfolio/hr_system_thumbnail.png" alt="Portfolio"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div
-                                class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Sistem
-                                Informasi Kepegawaian</h4>
-                            <p class="text-sm text-slate-500">Manajemen SDM & Payroll</p>
-                        </div>
-                    </div>
-                    <!-- Portfolio 3 -->
-                    <div
-                        class="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 cursor-pointer">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="./assets/images/portfolio/library_system_thumbnail.png" alt="Portfolio"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div
-                                class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Sistem
-                                Informasi Perpustakaan</h4>
-                            <p class="text-sm text-slate-500">Katalogisasi & Peminjaman Buku</p>
-                        </div>
-                    </div>
-                    <!-- Portfolio 4 -->
-                    <div
-                        class="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 cursor-pointer">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="./assets/images/portfolio/e-commerce_thumbnail.png" alt="Portfolio"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div
-                                class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                                E-Commerce Platform</h4>
-                            <p class="text-sm text-slate-500">Toko online dengan integrasi payment gateway</p>
-                        </div>
-                    </div>
-                    <!-- Portfolio 5 -->
-                    <div
-                        class="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 cursor-pointer">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="./assets/images/portfolio/dashboard_thumbnail.png" alt="Portfolio"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div
-                                class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Admin
-                                Dashboard</h4>
-                            <p class="text-sm text-slate-500">Panel manajemen data real-time</p>
-                        </div>
-                    </div>
+            <!-- 5. SKILLS -->
+            <section id="skills" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Skills</h2>
+                <div id="skills-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
-            <!-- Interview Section -->
-            <section id="interview" class="mb-20 scroll-mt-16">
-                <div class="flex items-center justify-between mb-10">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-2">Assessment
-                            Result</p>
-                        <h2 class="text-3xl font-bold font-outfit text-slate-900">Hasil Interview</h2>
-                    </div>
-                    <div
-                        class="bg-blue-600 text-white px-6 py-2 rounded-2xl font-bold text-sm shadow-lg shadow-blue-200">
-                        PENGENALAN DIRI
+            <!-- 6. PROJECT -->
+            <section id="projects" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Projects</h2>
+                <div id="projects-list" class="grid grid-cols-1 gap-8">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+            
+            <!-- 7. COURSE -->
+            <section id="courses" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Courses</h2>
+                <div id="courses-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+
+            <!-- 8. CERTIFICATIONS -->
+            <section id="certifications" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Certifications</h2>
+                <div id="certifications-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+            
+            <!-- 9. LANGUAGES -->
+            <section id="languages" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Languages</h2>
+                <div id="languages-list" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+            
+            <!-- 10. REFERENCES -->
+             <section id="references" class="scroll-mt-16 hidden">
+                <h2 class="section-title">References</h2>
+                <div id="references-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                   <!-- Dynamic Content -->
+                </div>
+            </section>
+
+            <!-- 11. ORGANIZATION -->
+            <section id="organizations" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Organizations</h2>
+                <div id="organizations-list" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+            
+            <!-- 12. HOBBIES (Interests) -->
+            <section id="hobbies" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <div id="hobbies-list" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <div id="hobbies-content" class="flex flex-wrap gap-2">
+                        <!-- Dynamic Content -->
                     </div>
                 </div>
-
-                <div class="grid grid-cols-1 gap-8">
-                    <!-- Q1 -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                        <div
-                            class="absolute top-0 left-0 w-1 h-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <p class="text-[10px] font-bold text-blue-500 mb-3 uppercase tracking-widest">Question 01 •
-                            Personality
-                        </p>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">Ceritakan tentang diri anda secara mendalam?
-                        </h4>
-                        <div class="space-y-4 text-slate-600 leading-relaxed text-sm">
-                            <p>
-                                Saya adalah seorang profesional Fullstack Developer yang berbasis di Bandung dengan
-                                latar
-                                belakang keluarga yang sangat mendukung karir saya di bidang teknologi. Sebagai anak
-                                kedua dari
-                                tiga bersaudara, saya belajar banyak tentang tanggung jawab dan kolaborasi sejak dini.
-                                Ketertarikan saya pada dunia pemrograman dimulai saat saya menempuh pendidikan di SMKN 1
-                                Cimahi,
-                                salah satu sekolah kejuruan terbaik di Jawa Barat untuk jurusan Software Engineering.
-                            </p>
-                            <p>
-                                Selama lebih dari 9 tahun berkarir, saya telah mengasah kemampuan saya dalam membangun
-                                ekosistem
-                                web yang kompleks. Saat ini, saya sedang menyelesaikan studi tingkat akhir di
-                                Universitas
-                                Widyatama jurusan Sistem Informasi untuk memperdalam pemahaman teoritis saya mengenai
-                                manajemen
-                                data dan arsitektur sistem. Sejak Januari 2018, saya bergabung dengan PT Sumroch Karya
-                                Indonesia, di mana saya bertanggung jawab penuh atas pengembangan aplikasi end-to-end
-                                menggunakan Laravel and Vue.js.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Q2 -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                        <div
-                            class="absolute top-0 left-0 w-1 h-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <p class="text-[10px] font-bold text-blue-500 mb-3 uppercase tracking-widest">Question 02 •
-                            Career Path
-                        </p>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">Apa kesibukan dan tanggung jawab utama Anda
-                            saat ini?
-                        </h4>
-                        <div class="space-y-4 text-slate-600 leading-relaxed text-sm">
-                            <p>
-                                Saat ini fokus utama saya adalah sebagai Lead Fullstack Developer di PT Sumroch Karya
-                                Indonesia.
-                                Tanggung jawab saya mencakup perancangan database, pengembangan API yang efisien, hingga
-                                memastikan antarmuka pengguna (UI) responsif and intuitif. Saya juga aktif mengawasi
-                                siklus
-                                hidup pengembangan perangkat lunak (SDLC) untuk memastikan setiap fitur dirilis tepat
-                                waktu
-                                dengan standar kualitas yang tinggi.
-                            </p>
-                            <p>
-                                Di samping pekerjaan profesional, saya juga sedang mendedikasikan waktu untuk
-                                menyelesaikan
-                                skripsi saya di Universitas Widyatama. Hal ini membantu saya tetap up-to-date with
-                                metodologi
-                                terbaru dalam analisis sistem dan manajemen proyek IT, yang langsung saya terapkan dalam
-                                pekerjaan sehari-hari.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                        <div
-                            class="absolute top-0 left-0 w-1 h-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <p class="text-[10px] font-bold text-blue-500 mb-3 uppercase tracking-widest">Question 03 •
-                            Motivation
-                        </p>
-                        <h4 class="text-lg font-bold text-slate-900 mb-4">Apa motivasi terbesar Anda untuk mencari
-                            tantangan
-                            baru?</h4>
-                        <div class="space-y-4 text-slate-600 leading-relaxed text-sm">
-                            <p>
-                                Setelah lebih dari 6 tahun di perusahaan saat ini, saya merasa telah mencapai titik di
-                                mana saya
-                                membutuhkan lingkungan baru untuk terus bertumbuh. Motivasi utama saya adalah keinginan
-                                untuk
-                                menghadapi tantangan teknis yang lebih kompleks dan skala proyek yang lebih besar. Saya
-                                percaya
-                                bahwa dengan berpindah ke lingkungan baru, saya akan terpapar pada budaya kerja yang
-                                berbeda,
-                                teknologi baru, dan jaringan profesional yang lebih luas.
-                            </p>
-                            <p>
-                                Saya mencari tempat di mana saya bisa berkontribusi lebih banyak pada arsitektur sistem
-                                tingkat
-                                tinggi dan mungkin mulai mengambil peran kepemimpinan yang lebih strategis. Saya ingin
-                                membawa
-                                pengalaman saya dalam Laravel and Vue.js ke tim yang dinamis dan inovatif.
-                            </p>
-                        </div>
-                    </div>
+            </section>
+            
+            <!-- 13. ADDITIONAL -->
+            <section id="additional" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Additional Information</h2>
+                <div id="additional-list" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
@@ -753,7 +154,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop"
-        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-100 hover:bg-blue-700 hover:-translate-y-1 active:scale-90">
+        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-[100] hover:bg-blue-700 hover:-translate-y-1 active:scale-90 cursor-pointer">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
