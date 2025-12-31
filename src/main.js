@@ -198,6 +198,12 @@ const cvData = {
 // --- 2. Rendering Logic ---
 
 function renderPersonal(data) {
+    // Fill Mobile Header
+    const mobileImg = document.getElementById('mobile-profile-img');
+    const mobileName = document.getElementById('mobile-profile-name');
+    if(mobileImg) mobileImg.src = data.image;
+    if(mobileName) mobileName.innerText = data.name;
+
     const header = document.getElementById('profile-header');
     header.innerHTML = `
         <div class="relative inline-block cursor-pointer group">
@@ -211,8 +217,8 @@ function renderPersonal(data) {
         
         ${data.goals ? `
         <div class="bg-white/10 backdrop-blur-sm py-3 px-4 rounded-xl border border-white/10 shadow-inner">
-            <p class="text-[9px] text-blue-100/60 uppercase tracking-[0.2em] font-bold mb-0.5">Current Focus</p>
-            <p class="text-xs font-bold text-white">${data.goals}</p>
+            <p class="text-[11px] text-blue-100/60 uppercase tracking-[0.2em] font-bold mb-0.5">Current Focus</p>
+            <p class="text-sm font-bold text-white">${data.goals}</p>
         </div>` : ''}
     `;
 
@@ -544,6 +550,41 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // Mobile Menu Toggle Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('mobile-menu-overlay');
+
+    const toggleMenu = (show) => {
+        if (show) {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            document.body.classList.add('overflow-hidden');
+        } else {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+    };
+
+    if (menuToggle) menuToggle.addEventListener('click', () => toggleMenu(true));
+    if (menuClose) menuClose.addEventListener('click', () => toggleMenu(false));
+    if (overlay) overlay.addEventListener('click', () => toggleMenu(false));
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768) {
+                toggleMenu(false);
+            }
+        });
+    });
 
     // Scroll Spy
     const sections = document.querySelectorAll('section[id]');
