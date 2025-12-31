@@ -291,7 +291,7 @@ function renderNav() {
             html += `
             <a href="#${item.id}" class="group flex items-center gap-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-all"></span>
-                <span class="text-xs font-bold tracking-widest uppercase">${item.label}</span>
+                <span class="text-sm md:text-xs font-bold tracking-widest uppercase">${item.label}</span>
             </a>`;
         }
     });
@@ -321,7 +321,7 @@ function renderSection(id, data, renderItemFn, isContentId = false) {
 // --- Render Item Functions ---
 
 const renderSummary = (text) => `
-    <p class="text-slate-600 leading-relaxed text-sm">${text}</p>
+    <p class="text-slate-600 leading-relaxed text-base">${text}</p>
 `;
 
 const renderExperience = (item) => `
@@ -343,7 +343,7 @@ const renderExperience = (item) => `
                     ${item.startDate} - ${item.endDate}
                 </span>
             </div>
-            <div class="text-slate-600 leading-relaxed text-sm space-y-2">
+            <div class="text-slate-600 leading-relaxed text-base space-y-2">
                 <p>${item.description}</p>
                 ${item.achievements ? `
                 <ul class="list-disc list-outside ml-4 marker:text-blue-400">
@@ -372,7 +372,7 @@ const renderEducation = (item) => `
             </span>
         </div>
         ${item.description ? `
-        <div class="text-slate-600 text-sm pl-16">
+        <div class="text-slate-600 text-base pl-16">
             <p>${item.description}</p>
         </div>` : ''}
     </div>
@@ -404,7 +404,7 @@ const renderProject = (item) => `
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>` : ''}
                 </div>
-                <p class="text-slate-600 text-sm leading-relaxed">${item.description}</p>
+                <p class="text-slate-600 text-base leading-relaxed">${item.description}</p>
                 <div class="flex flex-wrap gap-2">
                     ${item.tools.map(t => `<span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-md">${t}</span>`).join('')}
                 </div>
@@ -466,13 +466,13 @@ const renderOrganization = (item) => `
             <span class="text-xs font-bold text-slate-400">${item.startDate} - ${item.endDate}</span>
         </div>
         <p class="text-sm text-blue-600 font-semibold mb-2">${item.employer}</p>
-        ${item.description ? `<p class="text-sm text-slate-600">${item.description}</p>` : ''}
+        ${item.description ? `<p class="text-base text-slate-600">${item.description}</p>` : ''}
     </div>
 `;
 
 // New Renderer for Text Area Hobbies
 const renderHobbies = (text) => `
-    <p class="text-slate-600 leading-relaxed text-sm">${text}</p>
+    <p class="text-slate-600 leading-relaxed text-base">${text}</p>
 `;
 
 // New Renderer for Structured Additional Info
@@ -487,7 +487,7 @@ const renderAdditional = (item) => `
                 ${item.startDate} - ${item.endDate}
             </span>
         </div>
-        ${item.description ? `<p class="text-slate-600 text-sm leading-relaxed mt-1">${item.description}</p>` : ''}
+        ${item.description ? `<p class="text-slate-600 text-base leading-relaxed mt-1">${item.description}</p>` : ''}
     </div>
 `;
 
