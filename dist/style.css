@@ -271,6 +271,9 @@
   .z-\[120\] {
     z-index: 120;
   }
+  .z-\[130\] {
+    z-index: 130;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -309,6 +312,9 @@
   }
   .-mr-8 {
     margin-right: calc(var(--spacing) * -8);
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
   }
   .mb-0\.5 {
     margin-bottom: calc(var(--spacing) * 0.5);
@@ -557,6 +563,11 @@
     :where(& > :not(:last-child)) {
       border-color: var(--color-slate-100);
     }
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .overflow-hidden {
     overflow: hidden;

@@ -20,11 +20,11 @@
 
         <!-- Mobile Header (Visible only on mobile) -->
         <header class="md:hidden w-full bg-sidebar text-white p-4 sticky top-0 z-[100] flex justify-between items-center shadow-lg">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full border-2 border-emerald-500 overflow-hidden">
+            <div class="flex items-center gap-3 overflow-hidden mr-2">
+                <div class="w-10 h-10 rounded-full border-2 border-emerald-500 overflow-hidden shrink-0">
                     <img id="mobile-profile-img" src="" alt="" class="w-full h-full object-cover">
                 </div>
-                <span id="mobile-profile-name" class="font-bold font-outfit text-sm"></span>
+                <span id="mobile-profile-name" class="font-bold font-outfit text-base truncate"></span>
             </div>
             <button id="menu-toggle" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -37,7 +37,7 @@
         <!-- 1. PERSONAL (Sidebar / Mobile Drawer) -->
         <aside id="sidebar" class="fixed inset-y-0 left-0 w-80 bg-sidebar text-white shrink-0 z-[120] -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:h-screen md:sticky md:top-0 md:z-50 md:flex">
             <!-- Close button for mobile -->
-            <button id="menu-close" class="md:hidden absolute top-4 right-4 p-2 hover:bg-white/10 rounded-lg transition-colors">
+            <button id="menu-close" class="md:hidden absolute top-4 right-4 p-2 hover:bg-white/10 rounded-lg transition-colors z-[130]">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             

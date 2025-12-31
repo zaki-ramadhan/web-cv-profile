@@ -5,7 +5,7 @@ const cvData = {
     personal: {
         image: "./assets/images/portfolio/profile.webp",
         goals: "Open for Leadership Roles", // Input: Goals saat ini
-        name: "Pelita", // Input: Full Name
+        name: "Putri Anindya Kusuma Wardani", // Input: Full Name
         email: "pelita@upscale.id", // Input: Email
         phone: "+62 812 3456 7890", // Input: Phone
         address: "Jl. Merdeka No. 10", // Input: Address
@@ -211,7 +211,7 @@ function renderPersonal(data) {
                 <img src="${data.image}" alt="${data.name}" class="w-full h-full object-cover rounded-full">
             </div>
         </div>
-        <h1 class="text-2xl font-bold font-outfit mb-1 tracking-tight">${data.name}</h1>
+        <h1 class="text-2xl font-bold font-outfit mb-4 tracking-tight">${data.name}</h1>
         <!-- Role is not in input list provided, assumed derived from experience or goals, keeping generic if missing -->
         ${data.role ? `<p class="text-blue-100/80 text-sm font-medium mb-4">${data.role}</p>` : ''}
         
@@ -435,11 +435,11 @@ const renderCertificate = (item) => `
     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-100 transition-colors">
         <div class="flex justify-between items-start mb-2">
             <h4 class="font-bold text-slate-900">${item.name}</h4>
-            <span class="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">${item.date}</span>
+            <span class="text-[11px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">${item.date}</span>
         </div>
-        <p class="text-sm text-blue-600 font-semibold mb-2">${item.institution}</p>
+        <p class="text-base text-blue-600 font-semibold mb-2">${item.institution}</p>
         ${item.link ? `
-        <a href="${item.link}" target="_blank" class="text-xs text-slate-400 hover:text-blue-500 flex items-center gap-1">
+        <a href="${item.link}" target="_blank" class="text-sm text-slate-400 hover:text-blue-500 flex items-center gap-1">
             Show Credential
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
         </a>` : ''}
