@@ -16,10 +16,11 @@
 
 <body class="bg-canvas-dark text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-700 antialiased">
 
-    <div class="flex flex-col md:flex-row items-start min-h-screen max-w-[1600px] mx-auto relative bg-canvas-light">
+    <div class="flex flex-col md:flex-row min-h-screen max-w-284 mx-auto relative bg-canvas-light">
 
         <!-- Mobile Header (Visible only on mobile) -->
-        <header class="md:hidden w-full bg-sidebar text-white p-4 sticky top-0 z-[100] flex justify-between items-center shadow-lg">
+        <header
+            class="md:hidden w-full bg-sidebar text-white p-4 sticky top-0 z-100 flex justify-between items-center shadow-lg">
             <div class="flex items-center gap-3 overflow-hidden mr-2">
                 <div class="w-10 h-10 rounded-full border-2 border-emerald-500 overflow-hidden shrink-0">
                     <img id="mobile-profile-img" src="" alt="" class="w-full h-full object-cover">
@@ -27,20 +28,30 @@
                 <span id="mobile-profile-name" class="font-bold font-outfit text-base truncate"></span>
             </div>
             <button id="menu-toggle" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
             </button>
         </header>
 
         <!-- Mobile Menu Overlay (Backdrop) -->
-        <div id="mobile-menu-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[110] hidden opacity-0 transition-opacity duration-300 md:hidden"></div>
+        <div id="mobile-menu-overlay"
+            class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-110 hidden opacity-0 transition-opacity duration-300 md:hidden">
+        </div>
 
         <!-- 1. PERSONAL (Sidebar / Mobile Drawer) -->
-        <aside id="sidebar" class="fixed inset-y-0 left-0 w-80 bg-sidebar text-white shrink-0 z-[120] -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:h-screen md:sticky md:top-0 md:z-50 md:flex">
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 w-80 bg-sidebar text-white shrink-0 z-120 -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:h-screen md:sticky md:top-0 md:z-50 md:flex">
             <!-- Close button for mobile -->
-            <button id="menu-close" class="md:hidden absolute top-4 right-4 p-2 hover:bg-white/10 rounded-lg transition-colors z-[130]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button id="menu-close"
+                class="md:hidden absolute top-4 right-4 p-2 hover:bg-white/10 rounded-lg transition-colors z-130">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
-            
+
             <div class="h-full flex flex-col p-8 overflow-y-auto no-scrollbar overscroll-contain w-full">
                 <!-- Profile Header -->
                 <div id="profile-header" class="text-center mb-8">
@@ -58,7 +69,7 @@
                 </div>
 
                 <!-- Navigation -->
-                <nav id="nav-menu" class="flex-grow space-y-0.5">
+                <nav id="nav-menu" class="grow space-y-0.5">
                     <!-- Dynamic Nav Links -->
                 </nav>
 
@@ -70,12 +81,20 @@
         </aside>
 
         <!-- Main Content (Right Column) -->
-        <main class="flex-grow p-6 md:p-12 lg:p-16 w-full space-y-20">
+        <main class="flex-1 min-w-0 p-6 md:p-12 lg:p-16 space-y-12">
 
             <!-- 2. SUMMARY -->
             <section id="summary" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Professional Summary</h2>
                 <div id="summary-content" class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+
+            <!-- 2.5 INTRODUCTION -->
+            <section id="introduction" class="scroll-mt-16 hidden">
+                <h2 class="section-title">Introduction</h2>
+                <div id="introduction-content">
                     <!-- Dynamic Content -->
                 </div>
             </section>
@@ -111,7 +130,7 @@
                     <!-- Dynamic Content -->
                 </div>
             </section>
-            
+
             <!-- 7. COURSE -->
             <section id="courses" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Courses</h2>
@@ -127,7 +146,7 @@
                     <!-- Dynamic Content -->
                 </div>
             </section>
-            
+
             <!-- 9. LANGUAGES -->
             <section id="languages" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Languages</h2>
@@ -135,23 +154,24 @@
                     <!-- Dynamic Content -->
                 </div>
             </section>
-            
+
             <!-- 10. REFERENCES -->
-             <section id="references" class="scroll-mt-16 hidden">
+            <section id="references" class="scroll-mt-16 hidden">
                 <h2 class="section-title">References</h2>
                 <div id="references-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   <!-- Dynamic Content -->
+                    <!-- Dynamic Content -->
                 </div>
             </section>
 
             <!-- 11. ORGANIZATION -->
             <section id="organizations" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Organizations</h2>
-                <div id="organizations-list" class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+                <div id="organizations-list"
+                    class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 divide-y divide-slate-100">
                     <!-- Dynamic Content -->
                 </div>
             </section>
-            
+
             <!-- 12. HOBBIES (Interests) -->
             <section id="hobbies" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Hobbies & Interests</h2>
@@ -161,7 +181,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- 13. ADDITIONAL -->
             <section id="additional" class="scroll-mt-16 hidden">
                 <h2 class="section-title">Additional Information</h2>
@@ -175,7 +195,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop"
-        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-[100] hover:bg-blue-700 hover:-translate-y-1 active:scale-90 cursor-pointer">
+        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-100 hover:bg-blue-700 hover:-translate-y-1 active:scale-90 cursor-pointer">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>

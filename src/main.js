@@ -20,6 +20,15 @@ const cvData = {
     },
     // Input: Summary (Text Area)
     summary: "Highly motivated Senior Fullstack Engineer with over 8 years of experience in building scalable web applications and microservices. Expert in the Laravel and Vue.js ecosystem with a strong focus on system performance, clean architecture, and team mentorship.",
+
+    // Input: Introduction (Videos)
+    introduction: {
+        videos: [
+            { title: 'Project Demo 1', thumbnail: './assets/images/portfolio/profile.webp' },
+            { title: 'Project Demo 2', thumbnail: './assets/images/portfolio/profile.webp' },
+            { title: 'Profile Intro', thumbnail: './assets/images/portfolio/profile.webp' }
+        ]
+    },
     
     // Input: Experience (Title, Company, Type, Checkbox Present, Dates, City, Desc)
     experience: [
@@ -279,6 +288,7 @@ function renderNav() {
     // STRICT ORDER: Personal(header), Summary, Experience, Education, Skills, Project, Course, Certifications, Languages, References, Organization, Hobbies, Additional
     const items = [
         { id: 'summary', label: 'Summary', check: cvData.summary },
+        { id: 'introduction', label: 'Introduction', check: cvData.introduction && cvData.introduction.videos && cvData.introduction.videos.length },
         { id: 'experience', label: 'Experience', check: cvData.experience && cvData.experience.length },
         { id: 'education', label: 'Education', check: cvData.education && cvData.education.length },
         { id: 'skills', label: 'Skills', check: cvData.skills && cvData.skills.length },
@@ -329,6 +339,128 @@ function renderSection(id, data, renderItemFn, isContentId = false) {
 const renderSummary = (text) => `
     <p class="text-slate-600 leading-relaxed text-base">${text}</p>
 `;
+
+const renderIntroduction = (data) => {
+    const videos = data.videos;
+    if (!videos || videos.length === 0) return '';
+    
+    return `
+        <div class="w-full" id="intro-player-container">
+            <!-- Main Video Player -->
+            <div class="relative w-full bg-slate-200 rounded-3xl overflow-hidden mb-12 aspect-video group shadow-xl">
+                <img id="intro-main-img" src="${videos[0].thumbnail}" alt="Video thumbnail" class="w-full h-full object-cover">
+                
+                <!-- Play Button Overlay -->
+                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/10 transition-colors">
+                    <button id="intro-play-btn" class="cursor-pointer w-20 h-20 bg-white/30 backdrop-blur-md hover:bg-white/50 rounded-full flex items-center justify-center transition-all shadow-lg scale-100 group-hover:scale-110 border border-white/40">
+                        <svg class="w-8 h-8 text-slate-900 ml-1 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Carousel -->
+            <div class="relative flex items-center justify-center gap-4 px-0 w-full">
+                <!-- Left Arrow -->
+                <button id="intro-prev-btn" class="hidden sm:flex cursor-pointer flex-shrink-0 w-12 h-12 rounded-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-blue-600 items-center justify-center transition-all">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+
+                <!-- Video Thumbnails -->
+                <div class="shrink min-w-0 flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar py-4 px-2 snap-x justify-start" id="intro-thumbnails">
+                    ${videos.map((video, index) => `
+                        <div class="intro-thumbnail-item cursor-pointer flex-shrink-0 w-48 sm:w-64 min-w-[12rem] sm:min-w-[16rem] transition-all snap-center group" data-index="${index}">
+                            <div class="rounded-2xl overflow-hidden border-2 ${index === 0 ? 'border-blue-500 shadow-md scale-[1.02]' : 'border-transparent hover:border-blue-200'} transition-all duration-300 bg-white h-full flex flex-col">
+                                <!-- Thumbnail Image Container -->
+                                <div class="relative aspect-video overflow-hidden bg-slate-200">
+                                    <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                    
+                                    <!-- Mini Play Button Overlay -->
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                         <div class="w-10 h-10 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm border border-white/30">
+                                            <svg class="w-4 h-4 text-slate-900 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                         </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Title Container -->
+                                <div class="px-4 py-3 border-t border-slate-50">
+                                    <p class="text-sm font-medium text-slate-700 truncate">${video.title}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Right Arrow -->
+                <button id="intro-next-btn" class="hidden sm:flex cursor-pointer flex-shrink-0 w-12 h-12 rounded-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-blue-600 items-center justify-center transition-all">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+        </div>
+    `;
+};
+
+function initIntroductionInteractivity(data) {
+    const videos = data.videos;
+    if (!videos || videos.length === 0) return;
+
+    let currentIndex = 0;
+    const mainImg = document.getElementById('intro-main-img');
+    const mainTitle = document.getElementById('intro-main-title');
+    const prevBtn = document.getElementById('intro-prev-btn');
+    const nextBtn = document.getElementById('intro-next-btn');
+    const thumbnails = document.querySelectorAll('.intro-thumbnail-item');
+    
+    if(!mainImg) return;
+
+    const updateView = (index) => {
+        currentIndex = index;
+        // Update Main
+        mainImg.style.opacity = '0'; // Simple fade effect
+        setTimeout(() => {
+            mainImg.src = videos[currentIndex].thumbnail;
+            mainImg.style.opacity = '1';
+        }, 150);
+        
+        if(mainTitle) mainTitle.innerText = videos[currentIndex].title;
+        
+        // Update Thumbnails Styles
+        thumbnails.forEach((thumb, idx) => {
+            const inner = thumb.querySelector('div'); 
+            if (idx === currentIndex) {
+                inner.classList.remove('border-transparent', 'hover:border-blue-200');
+                inner.classList.add('border-blue-500', 'shadow-md', 'scale-[1.02]');
+                
+                // Scroll active thumbnail into view
+                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                inner.classList.add('border-transparent', 'hover:border-blue-200');
+                inner.classList.remove('border-blue-500', 'shadow-md', 'scale-[1.02]');
+            }
+        });
+    };
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const index = parseInt(thumb.getAttribute('data-index'));
+            updateView(index);
+        });
+    });
+
+    if(prevBtn) prevBtn.addEventListener('click', () => {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) newIndex = videos.length - 1;
+        updateView(newIndex);
+    });
+
+    if(nextBtn) nextBtn.addEventListener('click', () => {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= videos.length) newIndex = 0;
+        updateView(newIndex);
+    });
+}
 
 const renderExperience = (item) => `
     <div class="relative pl-8 md:pl-10 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-0 before:w-0.5 before:bg-blue-100">
@@ -507,6 +639,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // STRICT ORDER EXECUTION
     renderSection('summary', cvData.summary, renderSummary, true);
+    renderSection('introduction', cvData.introduction, renderIntroduction, true);
+    initIntroductionInteractivity(cvData.introduction);
     renderSection('experience', cvData.experience, renderExperience);
     renderSection('education', cvData.education, renderEducation);
     renderSection('skills', cvData.skills, renderSkill);
